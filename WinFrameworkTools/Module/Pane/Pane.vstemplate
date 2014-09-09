@@ -1,0 +1,24 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>Control.cs</DefaultName>
+    <Name>ModuleControl</Name>
+    <Description>Builds Basic Control</Description>
+    <ProjectType>CSharp</ProjectType>
+  </TemplateData>
+  <CustomParameters>
+    <CustomParameter Name="$module$" Value="Module"/>
+    <CustomParameter Name="$sub$" Value="Sub"/>
+  </CustomParameters>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="UserControl" TargetFileName="Modules\$module$\$module$$sub$.cs" ReplaceParameters="true">Pane.csx</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$$sub$.Designer.cs" ReplaceParameters="true">Pane.Designer.csx</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$$sub$.resx" ReplaceParameters="true">Pane.resxx</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="ViewModel\$module$\$module$$sub$ViewModel.cs" ReplaceParameters="true">PaneViewModel.csx</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="Presenters\$module$\$module$$sub$Presenter.cs" ReplaceParameters="true">PanePresenter.csx</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>WinFrameworkTools</Assembly>
+    <FullClassName>WinFrameworkTools.PaneModuleWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

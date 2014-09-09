@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Users\Seth\Documents\DevExpress\IDE Tools\Community\PlugIns</OutputPath>
+    <OutputPath>C:\Users\Seth\Documents\DevExpress\IDE Tools\Community\PlugIns\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -87,6 +87,13 @@
     <Compile Include="MainModuleDialog.Designer.cs">
       <DependentUpon>MainModuleDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaneModuleWizard.cs" />
+    <Compile Include="PaneModuleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaneModuleDialog.Designer.cs">
+      <DependentUpon>PaneModuleDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuleDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +119,9 @@
     <Content Include="Module\Main\MainViewModel.csx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Module\Pane\Pane.vstemplate">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Module\Main\Main.vstemplate">
@@ -125,6 +135,9 @@
     <EmbeddedResource Include="MainModuleDialog.resx">
       <DependentUpon>MainModuleDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaneModuleDialog.resx">
+      <DependentUpon>PaneModuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuleDialog.resx">
       <DependentUpon>ModuleDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,7 +145,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Module\Edit\" />
-    <Folder Include="Module\Panel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Pane\Pane.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Module\Pane\Pane.Designer.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Module\Pane\Pane.resxx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Module\Pane\PanePresenter.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Module\Pane\PaneViewModel.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

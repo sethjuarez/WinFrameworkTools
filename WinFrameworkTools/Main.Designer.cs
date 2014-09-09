@@ -38,8 +38,10 @@ namespace WinFrameworkTools
         {
             this.components = new System.ComponentModel.Container();
             this.actionCreateMainModule = new DevExpress.CodeRush.Core.Action(this.components);
+            this.actionCreatePaneModule = new DevExpress.CodeRush.Core.Action(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Images16x16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actionCreateMainModule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actionCreatePaneModule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // actionCreateMainModule
@@ -53,8 +55,21 @@ namespace WinFrameworkTools
             this.actionCreateMainModule.ToolbarItem.Image = null;
             this.actionCreateMainModule.ToolbarItem.ToolbarName = null;
             this.actionCreateMainModule.Execute += new DevExpress.CodeRush.Core.CommandExecuteEventHandler(this.actionCreateMainModule_Execute);
+            // 
+            // actionCreatePaneModule
+            // 
+            this.actionCreatePaneModule.ActionName = "CreatePaneModule";
+            this.actionCreatePaneModule.ButtonText = "Create Pane Module";
+            this.actionCreatePaneModule.CommonMenu = DevExpress.CodeRush.Menus.VsCommonBar.ProjectContext;
+            this.actionCreatePaneModule.ImageBackColor = System.Drawing.Color.Empty;
+            this.actionCreatePaneModule.ToolbarItem.ButtonIsPressed = false;
+            this.actionCreatePaneModule.ToolbarItem.Caption = null;
+            this.actionCreatePaneModule.ToolbarItem.Image = null;
+            this.actionCreatePaneModule.ToolbarItem.ToolbarName = null;
+            this.actionCreatePaneModule.Execute += new DevExpress.CodeRush.Core.CommandExecuteEventHandler(this.actionCreatePaneModule_Execute);
             ((System.ComponentModel.ISupportInitialize)(this.Images16x16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actionCreateMainModule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actionCreatePaneModule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -62,5 +77,6 @@ namespace WinFrameworkTools
         #endregion
 
         private DevExpress.CodeRush.Core.Action actionCreateMainModule;
+        private DevExpress.CodeRush.Core.Action actionCreatePaneModule;
     }
 }

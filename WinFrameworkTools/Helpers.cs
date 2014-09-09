@@ -63,7 +63,7 @@ namespace WinFrameworkTools
         {
             var projectPath = Path.GetDirectoryName(project.FilePath);
             string modules = Path.Combine(projectPath, "Modules");
-            return Directory.EnumerateDirectories(modules);
+            return Directory.EnumerateDirectories(modules).Select(s => s.Split('\\').Last());
         }
            
     }

@@ -40,12 +40,28 @@ namespace WinFrameworkTools
 
         private void actionCreateMainModule_Execute(ExecuteEventArgs ea)
         {
+            ExecuteTemplate("Main");
+        }
+
+        private void actionCreatePaneModule_Execute(ExecuteEventArgs ea)
+        {
+            ExecuteTemplate("Pane");
+        }
+
+        private void ExecuteTemplate(string template)
+        {
             try
             {
-                var template = Path.Combine(_templateDirectory, "Main", "Main.vstemplate");
-                EnvDTE.Project project = CodeRush.Source.ActiveProject.GetEnvDTEProject();
-                var projectItems = project.ProjectItems;
-                projectItems.AddFromTemplate(template, "temp.cs");
+                if (CodeRush.Source.ActiveProject != null)
+                {
+                    EnvDTE.Project project = CodeRush.Source.ActiveProject.GetEnvDTEProject();
+                    var projectItems = project.ProjectItems;
+
+                    var t = Path.Combine(_templateDirectory, template, template +  ".vstemplate");
+                    projectItems.AddFromTemplate(t, "temp.cs");
+                }
+                else
+                    Console.Write("No Active Project!");
 
             }
             catch (Exception ex)
