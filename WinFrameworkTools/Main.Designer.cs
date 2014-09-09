@@ -53,6 +53,7 @@ namespace WinFrameworkTools
             this.actionCreateMainModule.CommonMenu = DevExpress.CodeRush.Menus.VsCommonBar.ProjectContext;
             this.actionCreateMainModule.GroupName = "Modules";
             this.actionCreateMainModule.ImageBackColor = System.Drawing.Color.Empty;
+            this.actionCreateMainModule.ParentMenu = "Modules";
             this.actionCreateMainModule.ToolbarItem.ButtonIsPressed = false;
             this.actionCreateMainModule.ToolbarItem.Caption = null;
             this.actionCreateMainModule.ToolbarItem.Image = null;
@@ -66,6 +67,8 @@ namespace WinFrameworkTools
             this.actionCreatePaneModule.CommonMenu = DevExpress.CodeRush.Menus.VsCommonBar.ProjectContext;
             this.actionCreatePaneModule.GroupName = "Modules";
             this.actionCreatePaneModule.ImageBackColor = System.Drawing.Color.Empty;
+            this.actionCreatePaneModule.ParentMenu = "Modules";
+            this.actionCreatePaneModule.Position = 2;
             this.actionCreatePaneModule.ToolbarItem.ButtonIsPressed = false;
             this.actionCreatePaneModule.ToolbarItem.Caption = null;
             this.actionCreatePaneModule.ToolbarItem.Image = null;
@@ -79,6 +82,8 @@ namespace WinFrameworkTools
             this.actionCreateEditModule.CommonMenu = DevExpress.CodeRush.Menus.VsCommonBar.ProjectContext;
             this.actionCreateEditModule.GroupName = "Modules";
             this.actionCreateEditModule.ImageBackColor = System.Drawing.Color.Empty;
+            this.actionCreateEditModule.ParentMenu = "Modules";
+            this.actionCreateEditModule.Position = 3;
             this.actionCreateEditModule.ToolbarItem.ButtonIsPressed = false;
             this.actionCreateEditModule.ToolbarItem.Caption = null;
             this.actionCreateEditModule.ToolbarItem.Image = null;
