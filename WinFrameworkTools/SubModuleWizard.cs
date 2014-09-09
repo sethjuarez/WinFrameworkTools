@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TemplateWizard;
 
 namespace WinFrameworkTools
 {
-    public class PaneModuleWizard : IWizard
+    public class SubModuleWizard : IWizard
     {
         private bool _shouldRun = true;
         private string _module = string.Empty;
@@ -33,13 +33,13 @@ namespace WinFrameworkTools
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
-            PaneModuleDialog dialog = new PaneModuleDialog();
+            SubModuleDialog dialog = new SubModuleDialog();
             dialog.SetModules(Helpers.GetModules(CodeRush.Source.ActiveProject));
             _module = string.Empty;
 
             _shouldRun = dialog.ShowDialog() == DialogResult.OK &&
                          !string.IsNullOrEmpty(dialog.ModuleName) &&
-                         string.IsNullOrEmpty(dialog.SubModuleName);
+                         !string.IsNullOrEmpty(dialog.SubModuleName);
 
             if (_shouldRun)
             {

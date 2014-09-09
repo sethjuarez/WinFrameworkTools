@@ -87,23 +87,19 @@
     <Compile Include="MainModuleDialog.Designer.cs">
       <DependentUpon>MainModuleDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaneModuleWizard.cs" />
-    <Compile Include="PaneModuleDialog.cs">
+    <Compile Include="SubModuleWizard.cs" />
+    <Compile Include="SubModuleDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaneModuleDialog.Designer.cs">
-      <DependentUpon>PaneModuleDialog.cs</DependentUpon>
+    <Compile Include="SubModuleDialog.Designer.cs">
+      <DependentUpon>SubModuleDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuleDialog.Designer.cs">
-      <DependentUpon>ModuleDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModuleWizard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Module\Edit\Edit.vstemplate">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Module\Main\Main.csx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -135,17 +131,12 @@
     <EmbeddedResource Include="MainModuleDialog.resx">
       <DependentUpon>MainModuleDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaneModuleDialog.resx">
-      <DependentUpon>PaneModuleDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuleDialog.resx">
-      <DependentUpon>ModuleDialog.cs</DependentUpon>
+    <EmbeddedResource Include="SubModuleDialog.resx">
+      <DependentUpon>SubModuleDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Module\Edit\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Module\Pane\Pane.csx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -160,6 +151,31 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Module\Pane\PaneViewModel.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Edit\Edit.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Edit\Edit.Designer.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Edit\Edit.resxx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Edit\EditPresenter.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Edit\EditViewModel.csx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -8,30 +8,30 @@ using $rootnamespace$.Presenters;
 
 namespace $rootnamespace$.Modules
 {
-    public partial class $module$ : BaseModuleControl, IRibbonModule
+    public partial class $module$$sub$ : BaseModuleControl, IRibbonModule
     {
-        private readonly $module$Presenter presenterCore;
-        public $module$()
-            : base(CreateViewModel<$module$ViewModel>)
+        private readonly $module$$sub$Presenter presenterCore;
+        public $module$$sub$()
+            : base(CreateViewModel<$module$$sub$ViewModel>)
         {
             InitializeComponent();
             presenterCore = CreatePresenter();
             BindCommands();
         }
 
-        public $module$ViewModel ViewModel
+        public $module$$sub$ViewModel ViewModel
         {
-            get { return GetViewModel<$module$ViewModel>(); }
+            get { return GetViewModel<$module$$sub$ViewModel>(); }
         }
 
-        public $module$Presenter Presenter
+        public $module$$sub$Presenter Presenter
         {
             get { return presenterCore; }
         }
 
-        protected virtual $module$Presenter CreatePresenter()
+        protected virtual $module$$sub$Presenter CreatePresenter()
         {
-            return new $module$Presenter(this, ViewModel);
+            return new $module$$sub$Presenter(this, ViewModel);
         }
 
         public RibbonControl Ribbon
@@ -42,7 +42,7 @@ namespace $rootnamespace$.Modules
 
         private void BindCommands()
         {
-            // bind commands to $module$ViewModel here
+            // bind commands to $module$$sub$ViewModel here
 
         }
     }

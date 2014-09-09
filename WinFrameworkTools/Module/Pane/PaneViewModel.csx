@@ -2,13 +2,11 @@
 using System.Linq;
 using DevExpress.Mvvm;
 using System.Collections.Generic;
-using DevExpress.DashboardCommon;
 
 namespace $rootnamespace$.ViewModel
 {
-    public class $module$$sub$ViewModel
+    public class $module$$sub$ViewModel : ISupportParentViewModel
     {
-        private readonly $module$ViewModel _parentViewModel;
         public $module$$sub$ViewModel()
             : this(null)
         {
@@ -17,16 +15,10 @@ namespace $rootnamespace$.ViewModel
 
         public $module$$sub$ViewModel($module$ViewModel parentViewModel)
         {
-            _parentViewModel = parentViewModel;
+            ParentViewModel = parentViewModel;
         }
 
 
-        public DashboardsViewModel ParentViewModel
-        {
-            get
-            {
-                return _parentViewModel;
-            }
-        }
+        public object ParentViewModel { get; set; }
     }
 }

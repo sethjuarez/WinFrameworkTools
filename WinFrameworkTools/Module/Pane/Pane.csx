@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using DevExpress.XtraLayout.Utils;
 using $rootnamespace$.ViewModel;
-using $rootnamespace$.Win.Presenters;
+using $rootnamespace$.Presenters;
 
 namespace $rootnamespace$.Modules
 {
@@ -37,7 +37,7 @@ namespace $rootnamespace$.Modules
 
         protected virtual $module$$sub$Presenter CreatePresenter()
         {
-            return new DashboardListPresenter(treeList, ViewModel);
+            return new $module$$sub$Presenter(treeList, ViewModel);
         }
 
         private void BindCommands()

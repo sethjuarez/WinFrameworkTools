@@ -1,6 +1,6 @@
 ﻿namespace WinFrameworkTools
 {
-    partial class PaneModuleDialog
+    partial class SubModuleDialog
     {
         /// <summary>
         /// Required designer variable.

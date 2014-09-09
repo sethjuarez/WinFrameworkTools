@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace WinFrameworkTools
 {
-    public partial class PaneModuleDialog : XtraForm
+    public partial class SubModuleDialog : XtraForm
     {
         private readonly int _middle;
         private readonly int _bottom;
-        public PaneModuleDialog()
+        public SubModuleDialog()
         {
             InitializeComponent();
         }

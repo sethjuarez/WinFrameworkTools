@@ -24,9 +24,6 @@ namespace WinFrameworkTools
 
             DevExpress.XtraEditors.WindowsFormsSettings.SetDPIAware();
             DevExpress.XtraEditors.WindowsFormsSettings.EnableFormSkins();
-            //DevExpress.XtraEditors.WindowsFormsSettings.DefaultLookAndFeel.SetSkinStyle("Office 2013");
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
         }
 
         public override void FinalizePlugIn()
@@ -46,6 +43,11 @@ namespace WinFrameworkTools
         private void actionCreatePaneModule_Execute(ExecuteEventArgs ea)
         {
             ExecuteTemplate("Pane");
+        }
+
+        private void actionCreateEditModule_Execute(ExecuteEventArgs ea)
+        {
+            ExecuteTemplate("Edit");
         }
 
         private void ExecuteTemplate(string template)
@@ -70,5 +72,7 @@ namespace WinFrameworkTools
                 Console.Write("Stack Trace: {0}\n", ex.StackTrace);
             }
         }
+
+        
     }
 }
