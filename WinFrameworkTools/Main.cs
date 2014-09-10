@@ -25,16 +25,13 @@ namespace WinFrameworkTools
 
             DevExpress.XtraEditors.WindowsFormsSettings.SetDPIAware();
             DevExpress.XtraEditors.WindowsFormsSettings.EnableFormSkins();
+            DevExpress.XtraEditors.WindowsFormsSettings.DefaultLookAndFeel.SetSkinStyle("Visual Studio 2013 Light");
         }
 
         public override void FinalizePlugIn()
         {
-
-
             base.FinalizePlugIn();
         }
-
-
 
         private void actionCreateMainModule_Execute(ExecuteEventArgs ea)
         {

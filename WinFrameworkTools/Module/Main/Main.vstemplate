@@ -19,6 +19,6 @@
   </TemplateContent>
   <WizardExtension>
     <Assembly>WinFrameworkTools</Assembly>
-    <FullClassName>WinFrameworkTools.ModuleWizard</FullClassName>
+    <FullClassName>WinFrameworkTools.MainModuleWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>
