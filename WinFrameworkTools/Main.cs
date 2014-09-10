@@ -9,6 +9,7 @@ using DevExpress.CodeRush.PlugInCore;
 using DevExpress.CodeRush.StructuralParser;
 using System.IO;
 using System.Reflection;
+using DevExpress.XtraEditors;
 
 namespace WinFrameworkTools
 {
@@ -59,20 +60,22 @@ namespace WinFrameworkTools
                     EnvDTE.Project project = CodeRush.Source.ActiveProject.GetEnvDTEProject();
                     var projectItems = project.ProjectItems;
 
-                    var t = Path.Combine(_templateDirectory, template, template +  ".vstemplate");
+                    var t = Path.Combine(_templateDirectory, template, template + ".vstemplate");
                     projectItems.AddFromTemplate(t, "temp.cs");
                 }
                 else
+                {
                     Console.Write("No Active Project!");
-
+                    XtraMessageBox.Show("No active project!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
                 Console.Write("Error: {0}", ex.Message);
                 Console.Write("Stack Trace: {0}\n", ex.StackTrace);
+                var message = string.Format("Error: {0}\n\nStack Trace: {1}", ex.Message, ex.StackTrace);
+                XtraMessageBox.Show("No active project!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }
