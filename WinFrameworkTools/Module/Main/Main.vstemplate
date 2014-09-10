@@ -14,7 +14,7 @@
     <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$.Designer.cs" ReplaceParameters="true">Main.Designer.csx</ProjectItem>
     <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$.resx" ReplaceParameters="true">Main.resxx</ProjectItem>
     <ProjectItem SubType="" TargetFileName="ViewModel\$module$\$module$ViewModel.cs" ReplaceParameters="true">MainViewModel.csx</ProjectItem>
-    <ProjectItem SubType="" TargetFileName="Presenters\$module$\$module$Presenter.cs" ReplaceParameters="true">MainPresenter.csx</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="Presenters\$module$Presenters\$module$Presenter.cs" ReplaceParameters="true">MainPresenter.csx</ProjectItem>
   </TemplateContent>
   <WizardExtension>
     <Assembly>WinFrameworkTools</Assembly>

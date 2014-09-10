@@ -5,10 +5,9 @@ using System.Collections.Generic;
 
 namespace $rootnamespace$.ViewModel
 {
-    public class $module$$sub$ViewModel : ISupportParentViewModel
+    public class $module$$sub$ViewModel
     {
         public $module$$sub$ViewModel()
-            : this(null)
         {
             
         }
@@ -19,6 +18,6 @@ namespace $rootnamespace$.ViewModel
         }
 
 
-        public object ParentViewModel { get; set; }
+        public $module$ViewModel ParentViewModel { get; set; }
     }
 }

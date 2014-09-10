@@ -15,7 +15,7 @@
     <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$$sub$.Designer.cs" ReplaceParameters="true">Pane.Designer.csx</ProjectItem>
     <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$$sub$.resx" ReplaceParameters="true">Pane.resxx</ProjectItem>
     <ProjectItem SubType="" TargetFileName="ViewModel\$module$\$module$$sub$ViewModel.cs" ReplaceParameters="true">PaneViewModel.csx</ProjectItem>
-    <ProjectItem SubType="" TargetFileName="Presenters\$module$\$module$$sub$Presenter.cs" ReplaceParameters="true">PanePresenter.csx</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="Presenters\$module$Presenters\$module$$sub$Presenter.cs" ReplaceParameters="true">PanePresenter.csx</ProjectItem>
   </TemplateContent>
   <WizardExtension>
     <Assembly>WinFrameworkTools</Assembly>

@@ -57,7 +57,8 @@ namespace WinFrameworkTools
                 EnvDTE.ProjectItems projectItems = null;
                 if (CodeRush.Source.ActiveProject != null)
                     projectItems = CodeRush.Source.ActiveProject.GetEnvDTEProject().ProjectItems;
-                else if (CodeRush.Source.ActiveSolution.ProjectElements.Count > 0)
+                else if (CodeRush.Source.ActiveSolution!= null && 
+                        CodeRush.Source.ActiveSolution.ProjectElements.Count > 0)
                     projectItems = ((ProjectElement)CodeRush.Source.ActiveSolution.ProjectElements.ToArray()[0]).GetEnvDTEProject().ProjectItems;
                 else if (CodeRush.Solution.AllProjects != null &&
                         CodeRush.Solution.AllProjects.FirstOrDefault() != null)
@@ -66,8 +67,6 @@ namespace WinFrameworkTools
                     projectItems = CodeRush.ProjectItems.Active.ProjectItems;
                 else if (CodeRush.Project.Active != null)
                     projectItems = CodeRush.Project.Active.ProjectObject.ProjectItems;
-
-                
 
                 if (projectItems != null)
                 {
@@ -85,7 +84,7 @@ namespace WinFrameworkTools
                 Console.Write("Error: {0}", ex.Message);
                 Console.Write("Stack Trace: {0}\n", ex.StackTrace);
                 var message = string.Format("Error: {0}\n\nStack Trace: {1}", ex.Message, ex.StackTrace);
-                XtraMessageBox.Show("No active project!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
