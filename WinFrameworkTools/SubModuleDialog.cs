@@ -7,19 +7,15 @@ namespace WinFrameworkTools
 {
     public partial class SubModuleDialog : XtraForm
     {
-        private readonly int _middle;
-        private readonly int _bottom;
         public SubModuleDialog()
         {
             InitializeComponent();
         }
 
-
         public string ModuleName
         {
             get
             {
-
                 return comboModules.SelectedItem.ToString();
             }
         }

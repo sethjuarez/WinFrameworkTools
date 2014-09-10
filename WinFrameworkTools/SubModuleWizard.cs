@@ -27,8 +27,8 @@ namespace WinFrameworkTools
         {
             // add enum item after classes have
             // been generated
-            if (!string.IsNullOrEmpty(_module))
-                Helpers.AddEnumItem("ModuleType", _module);
+            //if (!string.IsNullOrEmpty(_module))
+            //    Helpers.AddEnumItem("ModuleType", _module);
         }
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)

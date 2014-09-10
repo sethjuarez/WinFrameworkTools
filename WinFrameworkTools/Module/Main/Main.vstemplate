@@ -10,7 +10,6 @@
   </CustomParameters>
   <TemplateContent>
     <References />
-    <ProjectItem SubType="UserControl" TargetFileName="Modules\$module$\GettingStarted.txt" ReplaceParameters="true">Main.txt</ProjectItem>
     <ProjectItem SubType="UserControl" TargetFileName="Modules\$module$\$module$.cs" ReplaceParameters="true">Main.csx</ProjectItem>
     <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$.Designer.cs" ReplaceParameters="true">Main.Designer.csx</ProjectItem>
     <ProjectItem SubType="" TargetFileName="Modules\$module$\$module$.resx" ReplaceParameters="true">Main.resxx</ProjectItem>

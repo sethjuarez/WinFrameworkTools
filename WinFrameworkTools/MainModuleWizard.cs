@@ -26,8 +26,8 @@ namespace WinFrameworkTools
 
         public void RunFinished()
         {
-            if (!string.IsNullOrEmpty(_module))
-                Helpers.AddEnumItem("ModuleType", _module);
+            //if (!string.IsNullOrEmpty(_module))
+            //    Helpers.AddEnumItem("ModuleType", _module);
         }
 
         private bool _shouldRun = true;
