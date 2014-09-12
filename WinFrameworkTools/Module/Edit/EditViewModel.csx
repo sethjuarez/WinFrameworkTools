@@ -28,7 +28,7 @@ namespace $rootnamespace$.ViewModel
 		// }
 
 		// 3. Whenever you want to instantiate, use this:
-		// var document = DocumentManagerService.CreateDocument("$module$$sub$", someParamter, this);
+		// var document = DocumentManagerService.CreateDocument("$module$$sub$", someParameter, this);
 		// if (document != null)
 		//		document.Show();
 

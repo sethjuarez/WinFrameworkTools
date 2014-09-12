@@ -83,7 +83,7 @@ namespace WinFrameworkTools
             {
                 Console.Write("Error: {0}", ex.Message);
                 Console.Write("Stack Trace: {0}\n", ex.StackTrace);
-                var message = string.Format("Error: {0}\n\nStack Trace: {1}", ex.Message, ex.StackTrace);
+                var message = string.Format("{0}\n\n{1}", ex.Message, ex.StackTrace);
                 XtraMessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
